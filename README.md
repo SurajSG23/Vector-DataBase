@@ -115,7 +115,7 @@ A **distance metric** (or distance function) is a **way to measure how far apart
 ## 1. Euclidean Distance (Straight-line distance)
 
 * Think of it as **“as the crow flies”** between two points.
-* Formula for vectors (A = [a_1, a_2, ..., a_n]) and (B = [b_1, b_2, ..., b_n]):
+* Formula for vectors: $$ A = [a_1, a_2, ..., a_n] $$  $$ B = [b_1, b_2, ..., b_n] $$ 
 
 $$
 \text{Euclidean Distance} = \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2 + ... + (a_n-b_n)^2}
@@ -167,11 +167,11 @@ $$
 
 * Often used to compute **cosine similarity**:
 
-[
+$$
 \cos(\theta) = \frac{A \cdot B}{||A|| , ||B||}
-]
+$$
 
-where (||A||) is the vector’s length (Euclidean norm).
+where ( ||A|| ) is the vector’s length (Euclidean norm).
 Cosine similarity = 1 → very similar, 0 → unrelated.
 
 ---
@@ -180,9 +180,9 @@ Cosine similarity = 1 → very similar, 0 → unrelated.
 
 | Metric          | Measures                   | Formula (2D/ND) | Use Case                          |   |                                     |
 | --------------- | -------------------------- | --------------- | --------------------------------- | - | ----------------------------------- |
-| **Euclidean**   | Straight-line distance     | √Σ(a_i-b_i)²    | Geometric distance, clustering    |   |                                     |
-| **Manhattan**   | Grid / city block distance | Σ               | a_i-b_i                           |   | High-dimensional AI, sparse vectors |
-| **Dot Product** | Alignment / similarity     | Σ(a_i * b_i)    | Cosine similarity, NLP embeddings |   |                                     |
+| **Euclidean**   | Straight-line distance     | $$ √Σ(a_i-b_i)² $$   | Geometric distance, clustering    |   |                                     |
+| **Manhattan**   | Grid / city block distance | $$ Σ a_i - b_i $$                               | High-dimensional AI, sparse vectors |
+| **Dot Product** | Alignment / similarity     | $$ Σ(a_i * b_i)  $$  | Cosine similarity, NLP embeddings |   |                                     |
 
 ---
 
