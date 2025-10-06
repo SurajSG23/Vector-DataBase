@@ -193,3 +193,38 @@ Cosine similarity = 1 → very similar, 0 → unrelated.
 * **Dot Product** → Compare **direction of two arrows**, not distance
 
 ---
+# Vector Embedding
+
+A **vector embedding** is a **numerical representation of data** (text, image, audio, etc.) in a **high-dimensional space**.
+
+* Each piece of data becomes a **vector** (list of numbers).
+* Vectors capture **meaning or features** of the data.
+* Similar items have vectors that are **close together** in this space.
+
+---
+
+### 🔹 Example (Text)
+
+Suppose we have three sentences:
+
+1. `"I love AI"`
+2. `"Machine learning is amazing"`
+3. `"I enjoy pizza"`
+
+After embedding with a model like **BERT or GPT**, they might become vectors like:
+
+| Sentence                        | Embedding (simplified) |
+| ------------------------------- | ---------------------- |
+| `"I love AI"`                   | `[0.23, -0.11, 0.45]`  |
+| `"Machine learning is amazing"` | `[0.21, -0.09, 0.50]`  |
+| `"I enjoy pizza"`               | `[0.01, 0.90, -0.10]`  |
+
+* Notice that the first two sentences are **about AI** → their vectors are **closer**.
+* The third sentence is **unrelated** → its vector is **farther away**.
+
+---
+
+**Key Idea:**
+Vector embeddings let computers **understand similarity** based on meaning, not exact words.
+
+---
