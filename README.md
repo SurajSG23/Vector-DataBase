@@ -178,11 +178,11 @@ Cosine similarity = 1 → very similar, 0 → unrelated.
 
 ### Summary Table
 
-| Metric          | Measures                   | Formula (2D/ND) | Use Case                          |   |                                     |
-| --------------- | -------------------------- | --------------- | --------------------------------- | - | ----------------------------------- |
-| **Euclidean**   | Straight-line distance     | $$ √Σ(a_i-b_i)² $$   | Geometric distance, clustering    |   |                                     |
-| **Manhattan**   | Grid / city block distance | $$ Σ a_i - b_i $$                               | High-dimensional AI, sparse vectors |
-| **Dot Product** | Alignment / similarity     | $$ Σ(a_i * b_i)  $$  | Cosine similarity, NLP embeddings |   |                                     |
+| Metric          | Measures                   | Formula (2D/ND)                  | Use Case                          |
+| --------------- | -------------------------- | -------------------------------- | --------------------------------- |
+| **Euclidean**   | Straight-line distance     | √Σ (a_i - b_i)²                  | Geometric distance, clustering    |
+| **Manhattan**   | Grid / city block distance | Σ a_i - b_i                    | High-dimensional AI, sparse vectors |
+| **Dot Product** | Alignment / similarity     | Σ (a_i * b_i)                     | Cosine similarity, NLP embeddings |
 
 ---
 
