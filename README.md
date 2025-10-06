@@ -96,3 +96,100 @@ Now, **vectors that are “close” in space mean the things are similar in mean
 * Nearby points = similar meaning / related things.
 
 ---
+
+Ah, got it! Let’s start **from the basics**.
+
+---
+
+# Distance Metric
+
+A **distance metric** (or distance function) is a **way to measure how far apart two points or vectors are** in a space.
+
+* In simple terms: it tells you **“how similar or different two things are”**.
+* The smaller the distance → the more similar the points.
+* The larger the distance → the more different they are.
+
+---
+
+
+## 1. Euclidean Distance (Straight-line distance)
+
+* Think of it as **“as the crow flies”** between two points.
+* Formula for vectors (A = [a_1, a_2, ..., a_n]) and (B = [b_1, b_2, ..., b_n]):
+
+$$
+\text{Euclidean Distance} = \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2 + ... + (a_n-b_n)^2}
+$$
+
+* **2D Example:**
+  A = `[3, 4]`, B = `[0, 0]`
+  Distance = √((3−0)² + (4−0)²) = √(9 +16) = 5
+
+*  Best for “real space” distances.
+
+---
+
+## 2. Manhattan Distance (City Block / Taxicab)
+
+* Imagine moving **only along streets**, not diagonal — like in a city grid.
+* Formula:
+
+$$
+\text{Manhattan Distance} = |a_1 - b_1| + |a_2 - b_2| + \dots + |a_n - b_n|
+$$
+
+* **2D Example:**
+  A = `[3, 4]`, B = `[0, 0]`
+  Distance = |3−0| + |4−0| = 3 + 4 = 7
+
+* Good for high-dimensional spaces and certain AI problems.
+
+---
+
+## 3. Dot Product (Scalar / Inner Product)
+
+* Measures **how much two vectors point in the same direction**.
+* Formula:
+
+$$
+A \cdot B = a_1b_1 + a_2b_2 + ... + a_nb_n
+$$
+
+* **2D Example:**
+  A = `[1, 2]`, B = `[3, 4]`
+  Dot Product = 1×3 + 2×4 = 3 + 8 = 11
+
+* **Interpretation:**
+
+  * Large positive → vectors point in **similar directions**
+  * 0 → vectors are **perpendicular (uncorrelated)**
+  * Negative → vectors point in **opposite directions**
+
+* Often used to compute **cosine similarity**:
+
+[
+\cos(\theta) = \frac{A \cdot B}{||A|| , ||B||}
+]
+
+where (||A||) is the vector’s length (Euclidean norm).
+Cosine similarity = 1 → very similar, 0 → unrelated.
+
+---
+
+### Summary Table
+
+| Metric          | Measures                   | Formula (2D/ND) | Use Case                          |   |                                     |
+| --------------- | -------------------------- | --------------- | --------------------------------- | - | ----------------------------------- |
+| **Euclidean**   | Straight-line distance     | √Σ(a_i-b_i)²    | Geometric distance, clustering    |   |                                     |
+| **Manhattan**   | Grid / city block distance | Σ               | a_i-b_i                           |   | High-dimensional AI, sparse vectors |
+| **Dot Product** | Alignment / similarity     | Σ(a_i * b_i)    | Cosine similarity, NLP embeddings |   |                                     |
+
+---
+
+### Analogy
+
+* **Euclidean** → Fly from A to B directly
+* **Manhattan** → Walk only along streets, no diagonals
+* **Dot Product** → Compare **direction of two arrows**, not distance
+
+---
