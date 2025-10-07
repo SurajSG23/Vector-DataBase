@@ -1,3 +1,10 @@
+# Repo Content:
+```
+├── config.py           # Configuration file for API keys and environment variables
+├── Module-1.ipynb      # Notebook for setting up and managing the Pinecone index
+├── Module-2.ipynb      # Notebook for implementing the smart course search functionality
+```
+
 # Vector Database
 
 A **Vector Database** stores and searches data based on **meaning** — not just exact values.
